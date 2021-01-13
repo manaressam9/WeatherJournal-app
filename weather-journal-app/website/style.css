@@ -1,0 +1,112 @@
+html{  
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body{
+   /* background-image: url("https://data.whicdn.com/images/304827379/original.gif");*/
+    background-image: url("myimg.gif");
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+   text-align: center;
+   color: white;
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   text-shadow: 2px 2px 2px #5a1169;
+}
+
+#app{
+    width:50%;
+    align-content: center;
+    margin-top:100px;
+    margin-bottom:100px;
+    box-shadow: 0 4px 8px 0 rgba(76, 2, 78, 0.2), 0 6px 20px 0 rgba(76, 2 ,78, 0.19);
+    border-radius: 20px;
+}
+
+.holder{
+margin-bottom: 2px;
+}
+
+.entry{
+    padding: 20px;
+    color:white;
+    text-shadow: 1px 1px 1px #642874;
+    font-size: 25px;
+}
+
+
+
+
+input{
+    display:block;
+    height: 60px;
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgba(76, 2, 78, 0.2), 0 6px 20px 0 rgba(76, 2 ,78, 0.19);
+    color:white;
+    background-color:inherit;
+}
+
+button{
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgba(76, 2, 78, 0.5), 0 6px 20px 0 rgba(76, 2 ,78, 0.3);
+    color:white;
+    background:linear-gradient(to bottom, #8533ff 0%, #9966ff 100%);
+    opacity: 0.6;
+}
+button:hover{
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+}
+
+
+
+textarea{
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgba(76, 2, 78, 0.2), 0 6px 20px 0 rgba(76, 2 ,78, 0.19);
+    color:white;
+    background-color:inherit;
+
+}
+::placeholder {
+    color:white;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:white;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color:white;
+  }
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    transition: all 0.3s ease-in-out;
+    outline:none;
+    background:linear-gradient(to bottom, #8533ff 0%, #9966ff 100%);
+
+}
+@media only screen and (max-width: 768px) {
+    #app{
+        width:85%;
+        align-content: center;
+        margin-top:100px;
+        margin-bottom:100px;
+    }
+  }
