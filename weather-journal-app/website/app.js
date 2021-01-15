@@ -12,7 +12,7 @@ const baseUrl = "http://localhost:8000/";
 
 // Create a new date instance dynamically with JS
 let d = new Date();
-let newDate = d.getMonth()+1'.'+ d.getDate()+'.'+ d.getFullYear();
+let newDate = d.getMonth()+1 +'.'+ d.getDate()+'.'+ d.getFullYear();
 //add Eventlistener on click on myBtn to send zipcode to api and save/post the response of api to our local server 
 btnElem.addEventListener('click',() => {
  let maData = {
