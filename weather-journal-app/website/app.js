@@ -12,7 +12,7 @@ const baseUrl = "http://localhost:8000/";
 
 // Create a new date instance dynamically with JS
 let d = new Date();
-let newDate = d.getMonth()+1 +'.'+ d.getDate()+'.'+ d.getFullYear();
+let newDate = d.getDate()+'.'+ d.getMonth()+1 +'.'+ d.getFullYear();
 //add Eventlistener on click on myBtn to send zipcode to api and save/post the response of api to our local server 
 btnElem.addEventListener('click',() => {
  let maData = {
@@ -21,7 +21,7 @@ btnElem.addEventListener('click',() => {
      date: newDate
  };
  //get temp info 
- apiResponse(maData.zip).then(zipInfo => {
+ apiResponse(maData.zip).then( (zipInfo) => {
      //checks if zip is correct 
   if(zipInfo.cod != 200){                     //  if not ,alert with place not found  
       alert('place not found')
@@ -66,9 +66,9 @@ async function showmaData(){
     let response = await fetch(`${baseUrl}getdata`);
     try{
        response.json().then(maData => {
-        tempElem.innerHtml = `temperature in celisus: ${maData.temp}`;
-        dateElem.innerHtml = `Date: ${maData.date}`;
-        contElem.innerHtml = `feelings: ${maData.cont}`
+       dateElem.innerHTML = `Date: ${maData.date}`;
+        tempElem.innerHTML = `temperature in celisus: ${maData.temp}`;
+        contElem.innerHTML = `feelings: ${maData.cont}`
        }).catch(errorCatcher);
     }catch(error){
       errorCatcher(error);
