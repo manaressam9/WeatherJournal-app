@@ -22,13 +22,13 @@ const port = 8000;
 const server = app.listen(port,() => console.log(`running on localhost: ${port}`));
 /* Routes */
 //Get Route named "getdata" to return data stored in projectData object
-app.get('/getdata', (request,response) => response.send(projectData).status(200).end());
+app.get('/getdata', (request,response) => { response.send(projectData).status(200).end();});
 //Post Route named "savedata" to save data received from the API
 app.post('/savedata', (request,response) => {
  projectData= {
      temp: request.body.temp,
-     cont: request.body.cont,
-     date: request.body.date
+     date: request.body.date,
+     cont: request.body.cont
  };
  response.send(projectData).status(200).end();
 });
