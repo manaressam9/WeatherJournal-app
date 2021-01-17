@@ -26,8 +26,8 @@ app.get('/getdata', (request,response) => { response.send(projectData).status(20
 //Post Route named "savedata" to save data received from the API
 app.post('/savedata', (request,response) => {
  projectData= {
-     temp: request.body.temp,
      date: request.body.date,
+     temp: request.body.temp,
      cont: request.body.cont
  };
  response.send(projectData).status(200).end();
